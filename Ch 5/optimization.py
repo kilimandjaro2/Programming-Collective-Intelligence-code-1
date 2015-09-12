@@ -78,10 +78,11 @@ def schedulecost(sol):
     return totalprice + totalwait
 
 def randomoptimize(domain, costf):
+    '''Random searching'''
     best = 999999999
     bestr = None
     # randomly test combinations
-    for i in range(10000):
+    for i in range(1000):
         # create a random solution
         r = [random.randint(domain[i][0], domain[i][1])
              for i in range(len(domain))]
@@ -95,6 +96,126 @@ def randomoptimize(domain, costf):
             bestr = r
     return bestr
 
+def hillclimb(domain, costf):
+    '''Hill climbing'''
+    # create a random solution
+    sol = [random.randint(domain[i][0], domain[i][1])
+           for i in range(len(domain))]
+
+    while 1:
+        # create list of neighboring solutions
+        neighbors = []
+        for j in range(len(domain)):
+
+            # one away in each direction
+            if sol[j] > domain[j][0]:
+                neighbors.append(sol[0:j] + [sol[j] + 1] + sol[j+1:])
+            if sol[j] < domain[j][1]:
+                neighbors.append(sol[0:j] + [sol[j] - 1] + sol[j+1:])
+
+        # see what the best solution amongst the neighbors is
+        current = costf(sol)
+        best = current
+        for j in range(len(neighbors)):
+            cost = costf(neighbors[j])
+            if cost < best:
+                best = cost
+                sol = neighbors[j]
+
+        # if there's no improvement, then we've reached the top
+        if best == current:
+            break
+
+    return sol
+
+def annealingoptimize(domain, costf, T = 10000.0, cool = 0.95, step = 1):
+    '''Simulated annealing'''
+    # initialize the values randomly
+    vec = [random.randint(domain[i][0], domain[i][1])
+           for i in range(len(domain))]
+
+    while T > 0.1:
+        # choose one of the indice
+        i = random.randint(0, len(domain) - 1)
+
+        # choose a direction to change it
+        dir = random.randint(-step, step)
+
+        # create a new lsit with one of the values changed
+        vecb = vec[:]
+        vecb[i] += dir
+        if vecb[i] < domain[i][0]:
+            vecb[i] = domain[i][0]
+        elif vecb[i] > domain[i][1]:
+            vecb[i] = domain[i][1]
+
+        # calculate the current cost and the new cost
+        ea = costf(vec)
+        eb = costf(vecb)
+        p = pow(math.e, (- eb - ea) / T)
+
+        # is it better, or does it make the probability cutoff
+        if eb < ea or random.random() < p:
+            vec = vecb
+
+        # decrease the temperature
+        T = T * cool
+
+    return vec
+
+def geneticoptimize(domain, costf, popsize = 50, step = 1,
+                    mutprob = 0.2, elite = 0.2, maxiter = 100):
+    '''Genetic algorithms'''
+    # mutation operation
+    def mutate(vec):
+        i = random.randint(0, len(domain) - 1)
+        if random.random() < 0.5 and vec[i] > domain[i][0]:
+            return vec[0:i] + [vec[i] - step] + vec[i+1:]
+        elif vec[i] < domain[i][1]:
+            return vec[0:i] + [vec[i] + step] + vec[i+1:]
+        return vec
+
+    # crossover operation
+    def crossover(r1, r2):
+        i = random.randint(1, len(domain) - 2)
+        return r1[0:i] + r2[i:]
+
+    # build the inital population
+    pop = []
+    for i in range(popsize):
+        vec = [random.randint(domain[i][0], domain[i][1])
+               for i in range(len(domain))]
+        pop.append(vec)
+
+    # how many winners from each generation?
+    topelite = int(elite * popsize)
+
+    # main loop
+    for i in range(maxiter):
+        scores = [(costf(v), v) for v in pop]
+        scores.sort()
+        ranked = [v for (s, v) in scores]
+
+        # start with the pure winners
+        pop = ranked[0:topelite]
+
+        # add mutated and bred forms of the winners
+        while len(pop) < popsize:
+            if random.random() < mutprob:
+                # mutation
+                c = random.randint(0, topelite)
+                pop.append(mutate(ranked[c]))
+            else:
+                # crossover
+                c1 = random.randint(0, topelite)
+                c2 = random.randint(0, topelite)
+                pop.append(crossover(ranked[c1], ranked[c2]))
+
+        # print current best score
+        # print scores[0][0]
+
+    return scores[0][1]
+
 
 if __name__ == "__main__":
     # s = [1, 4, 3, 2, 7, 3, 6, 3, 2, 4, 5, 3]
@@ -102,6 +223,19 @@ if __name__ == "__main__":
     # print schedulecost(s)
 
     domain = [(0, 8)] * (len(people) * 2)
+
     s = randomoptimize(domain, schedulecost)
     printschedule(s)
-    print schedulecost(s)
+    print "Random searching", schedulecost(s)
+
+    s = hillclimb(domain, schedulecost)
+    printschedule(s)
+    print "Hill climbing", schedulecost(s)
+
+    s = annealingoptimize(domain, schedulecost)
+    printschedule(s)
+    print "Simulated annealing", schedulecost(s)
+
+    s = geneticoptimize(domain, schedulecost)
+    printschedule(s)
+    print "Genetic algorithms", schedulecost(s)
