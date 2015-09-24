@@ -1,0 +1,100 @@
+['nbsp', 'news', 'articles', 'raquo', 'york', 'dunham']
+(13.262043747474774, "Hillary Clinton Admits to Lena Dunham: I ''Turned Down'' Bill Clinton Twice ... - E! Online")
+(10.763801408753583, 'Obama and Putin to meet; Syria and Ukraine vie for attention - Reuters')
+(9.4533413977022871, 'Four killed in crash of bus, Duck vehicle - USA TODAY')
+
+['pope', 'immigrants', 'congress', 'francis', 'their', 'washington']
+(43.94302139224046, 'Pope Francis implores Congress to accept immigrants as their own - Washington Post')
+(2.7277490935307176, "5 things to know about today's papal visit")
+(2.3289876013120518, 'Francis in America: Pope Francis Challenges Congress to Heal World\xe2\x80\x99s \xe2\x80\x98Open Wounds\xe2\x80\x99')
+
+['trump', 'poll', 'news', 'support', 'first', 'into']
+(20.915647598684767, 'Poll: Trump lead shrinks, still tops in GOP field')
+(18.318549154150617, 'FOX NEWS POLL: Trump holds his lead but Fiorina, Rubio gain ground - READ THE FULL POLL RESULTS -  FOX NEWS FIRST: Trump treads water as others rise - COMPLETE CAMPAIGN 2016 COVERAGE')
+(9.7582900177644269, 'First Draft: New Polls Show Support for Donald Trump Is Holding Steady')
+
+['that', 'more', 'people', 'than', 'make', 'daily']
+(13.156208916717604, "Yemen IS Branch Says It's Behind Mosque Blast That Killed 25")
+(13.142183904296301, 'Poor Odds: Daily Fantasy Sports and the Hidden Cost of America\xe2\x80\x99s Weird Gambling Laws')
+(9.1219291963906706, 'Matter: That Stinky Cheese Is a Result of Evolutionary Overdrive')
+
+['about', 'first', 'jinping', 'china', 'president', 'obama']
+(19.102206977650994, 'Xi Jinping\xe2\x80\x99s U.S. Visit')
+(8.3962816877172024, "5 things to know about today's papal visit")
+(7.4130425799660173, 'Cultural Revolution Shaped Xi Jinping, From Schoolboy to Survivor')
+
+['senate', 'bill', 'shutdown', 'reuters', 'nbsp', 'government']
+(39.660453369887378, 'Senate stops bill defunding Planned Parenthood - Reuters')
+(4.6196789768084114, 'Dems: Let Boehner shut it down')
+(3.3793407093468155, 'Oregon man hit with $2 million cellphone bill - VIDEO: Oregon man shocked by $2 million cell phone bill')
+
+['president', 'peace', 'colombia', 'farc', 'leaders', 'sign']
+(28.937178698068998, 'Colombia, FARC sign peace deal')
+(15.119965592786903, 'Colombia Nears a Peace Deal With FARC Rebels')
+(10.167428275511492, 'Colombia, FARC leaders agree on path for peace')
+
+['texas', 'chase', 'killed', 'news', 'immigrants', 'carrying']
+(51.564335054676036, '6 Killed as SUV Carrying Immigrants Crashes in Texas Chase - New York Times')
+(7.0494954981479561, '6 Killed as S.U.V. Carrying Immigrants Crashes in Texas Chase')
+(3.8819354805517179, 'Texas coach accused of ordering players to hit referee resigns')
+
+['ghost', 'couple', 'adventures', 'dead', 'nbsp', 'found']
+(54.637153387509713, "'Ghost Adventures' couple had history of domestic abuse - USA TODAY")
+(2.6028157402920957, "'Ghost' stars' murder-suicide")
+(1.4531176516916577, "Couple's $2M Verizon bill")
+
+['caterpillar', 'jobs', 'chicago', 'tribune', 'least', 'times']
+(38.965723259010105, 'Caterpillar to cut at least 10000 jobs - Chicago Tribune')
+(5.211018812809538, 'Caterpillar, Feeling Global Slump, to Cut Up to 10,000 Jobs')
+(1.5089654261959589, "3 schools closed because of Legionnaires' disease threat")
+
+['during', 'stampede', 'mecca', 'killed', 'injured', 'occurred']
+(20.974336007782735, 'Disaster in pictures')
+(20.974335973523903, 'The aftermath of the stampede')
+(7.9151278611599869, 'Massive rescue effort')
+
+['pope', 'immigration', 'climate', 'change', 'trump', 'morning']
+(48.345108456236304, "Thursday's Morning Email: Pope Focuses On Climate Change, Immigration and ... - Huffington Post")
+(14.83145185893955, 'Donald Trump vs. the Pope on immigration, climate change')
+(4.0869470825784164, "Happy fall! Here's why leaves change color")
+
+['john', 'putin', 'elton', 'after', 'with', 'vladimir']
+(22.752367483456261, 'Vladimir Putin Calls Elton John, This Time for Real')
+(22.708521243080284, 'Putin has called Elton John after prank, Kremlin says')
+(22.63680544823017, "Putin 'calls Elton John after prank'")
+
+['pope', 'congress', 'francis', 'address', 'american', 'visit']
+(28.589288430918629, "Pope Francis to Congress: Use laws to protect human life - VIDEO: Reaction to Pope's address to Congress  - Pope cites controversial monk, activist in address to Congress - COMPLETE COVERAGE OF THE POPE'S VISIT")
+(14.580259593993581, 'Pope to Congress: Share the wealth')
+(12.928359988670122, 'Francis in America: Conservatives and Liberals Find Much to Cheer in Pope Speech')
+
+['saudi', 'hajj', 'arabia', 'stampede', 'latest', 'kills']
+(52.798590132877294, 'The Latest: Death Toll in Saudi Hajj Tragedy Reaches 719 - New York Times')
+(6.7999723079349046, 'Hajj: The pilgrimage to Mecca')
+(6.1406429375794227, 'The aftermath of the stampede')
+
+['from', 'what', 'said', 'european', 'union', 'this']
+(19.774084200582784, 'What Britain Wants From European Union Is Not Clear, France Says')
+(14.343426412940477, 'What does your future car look like?')
+(9.3690962198840193, 'No nooses at university, police say, but anxiety persists')
+
+['obama', 'putin', 'meet', 'next', 'week', 'york']
+(51.596096099781697, 'Obama and Putin to meet; Syria and Ukraine vie for attention - Reuters')
+(13.419667507364611, 'White House Says Obama and Putin Will Meet Next Week')
+(12.982634028995447, 'Amid Fresh Tension Over Syria, Obama and Putin Seek to Meet')
+
+['clinton', 'hillary', 'lena', 'dunham', 'down', 'bill']
+(46.340038533141673, "Hillary Clinton Admits to Lena Dunham: I ''Turned Down'' Bill Clinton Twice ... - E! Online")
+(4.8038880797814878, 'Source: FBI confident it will recover Clinton emails - VIDEO: More emails recovered from Clinton server   - FOX NEWS POLL: Voters think Hillary lying about emails')
+(1.7289902053298007, 'Poll: Trump lead shrinks, still tops in GOP field')
+
+['europe', 'they', 'other', 'countries', 'after', 'refugee']
+(19.738164807997702, 'Traveling in Europe\xe2\x80\x99s River of Migrants')
+(15.186553626697401, 'Opposition to Refugee Quotas Softens in Europe\xe2\x80\x99s Old Communist Bloc')
+(11.153655400493857, 'As Europe Wrangles Over Migrant Relocation, Reality Moves Faster')
+
+['vehicle', 'seattle', 'killed', 'four', 'crash', 'were']
+(50.484599365644826, 'Four killed in crash of bus, Duck vehicle - USA TODAY')
+(14.85795756548907, '2 dead, 9 critical as bus, duck tour vehicle collide')
+(5.0272915523926578, 'Dozens killed in mosque attack in Yemen')
+
