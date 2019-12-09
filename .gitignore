@@ -5,3 +5,4 @@
 **/*.pyc
 **/*.db
 Ch\ 9/libsvm-3.20/
+*.bak
