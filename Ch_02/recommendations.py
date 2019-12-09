@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
-# scatterPlots.py	# This file's Name
+# recommendations.py	# This file's Name
 
 #from editor import *			# Idea From David Beazley working "en vivo"
 # Toutes les Libraries indispensables
