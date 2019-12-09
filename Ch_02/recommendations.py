@@ -12,6 +12,8 @@ from pprint import pprint  # A importer toujours...car tres utile
 # print ("dir() === Indispensables en direct dans le Terminal"); pprint(dir())
 
 __ref__ = """
+Modifs du 12/9/19, 12:15
+
 # ===  References  ===
 # Reworked by ZZ : --- on : --- 12/8/19, 20:32
 
@@ -87,22 +89,35 @@ Cas de recuperation d'anciens codes:
 
 
 def first():
-	"""<Documentation de first()>"""
+	"""
+	Reprise des resultats donnes par l'auteur sur le cas de "critics"  """
 
-	print("""< # Entering"first"   > """)
+	print("""
+	# 	Test cases from the Book
+	#		Remarks: a Bug was found and corrected in "Distance Eulerienne" """)
 
-	# 	test cases
-	
 	p1 = 'Gene Seymour'
 
 	p2 = 'Jack Matthews'
-	print(sim_distance(critics, p1 , p2))
-	print(sim_pearson (critics, p1 , p2))
+
+	sd = sim_distance(critics, p1 , p2)
+	sp = sim_pearson (critics, p1 , p2)
+	
+	print(f"""Coefficient de Similitude entre {p1}  et {p2}  :
+	Coeff_Distance Eulerienne = {sd:.03}
+	Coeff_Pearson             = {sp:.03}
+	""")
 	
 	p2 = 'Lisa Rose'	
-	print(sim_distance(critics, p1 , p2))
-	print(sim_pearson (critics, p1 , p2))
+	
+	sd = sim_distance(critics, p1 , p2)
+	sp = sim_pearson (critics, p1 , p2)
 
+	print(f"""Coefficient de Similitude entre {p1}  et {p2}  :
+	Coeff_Distance Eulerienne = {sd:.03}
+	Coeff_Pearson             = {sp:.03}
+	""")
+	
 	p0 = 'Toby'	
 	print(topMatches(critics, p0 , n=3))
 	
@@ -196,6 +211,7 @@ def sim_distance(prefs, person1, person2):
 		for item in prefs[person1] if item in prefs[person2]
 	])
 # 	return 1 / (1 + sum_of_squares)  # between (0, 1)  # BUG
+#	print("BUG  corrige...1 / (1 + sqrt(sum_of_squares))")
 	return 1 / (1 + sqrt(sum_of_squares))  # between (0, 1)  # BUG corrige
 
 
@@ -363,19 +379,28 @@ output = """
 	# ========== Job Begins ========== #
 <Documentation de first()>
 < # Entering"first"   > 
-0.8
-0.963795681875635
-0.14814814814814814
-0.39605901719066977
+Coefficient de Similitude entre Gene Seymour  et Jack Matthews  :
+	Coeff_Distance Eulerienne = 0.667
+	Coeff_Pearson             = 0.964
+	
+Coefficient de Similitude entre Gene Seymour  et Lisa Rose  :
+	Coeff_Distance Eulerienne = 0.294
+	Coeff_Pearson             = 0.396
+	
 [(0.9912407071619299, 'Lisa Rose'), (0.9244734516419049, 'Mick LaSalle'), (0.8934051474415647, 'Claudia Puig')]
-[(3.3477895267131017, 'The Night Listener'), (2.8325499182641614, 'Lady in the Water'), (2.530980703765565, 'Just My Luck')]
+[(3.3477895267131017, 'The Night Listener'),
+ (2.8325499182641614, 'Lady in the Water'),
+ (2.530980703765565, 'Just My Luck')]
 [(0.6579516949597695, 'You, Me and Dupree'), (0.4879500364742689, 'Lady in the Water'), (0.11180339887498941, 'Snakes on a Plane'), (-0.1798471947990544, 'The Night Listener'), (-0.42289003161103106, 'Just My Luck')]
 [(4.0, 'Michael Phillips'), (3.0, 'Jack Matthews')]
-{'Lady in the Water': [(0.4, 'You, Me and Dupree'), (0.2857142857142857, 'The Night Listener'), (0.2222222222222222, 'Snakes on a Plane'), (0.2222222222222222, 'Just My Luck'), (0.09090909090909091, 'Superman Returns')], 'Snakes on a Plane': [(0.2222222222222222, 'Lady in the Water'), (0.18181818181818182, 'The Night Listener'), (0.16666666666666666, 'Superman Returns'), (0.10526315789473684, 'Just My Luck'), (0.05128205128205128, 'You, Me and Dupree')], 'Just My Luck': [(0.2222222222222222, 'Lady in the Water'), (0.18181818181818182, 'You, Me and Dupree'), (0.15384615384615385, 'The Night Listener'), (0.10526315789473684, 'Snakes on a Plane'), (0.06451612903225806, 'Superman Returns')], 'Superman Returns': [(0.16666666666666666, 'Snakes on a Plane'), (0.10256410256410256, 'The Night Listener'), (0.09090909090909091, 'Lady in the Water'), (0.06451612903225806, 'Just My Luck'), (0.05333333333333334, 'You, Me and Dupree')], 'You, Me and Dupree': [(0.4, 'Lady in the Water'), (0.18181818181818182, 'Just My Luck'), (0.14814814814814814, 'The Night Listener'), (0.05333333333333334, 'Superman Returns'), (0.05128205128205128, 'Snakes on a Plane')], 'The Night Listener': [(0.2857142857142857, 'Lady in the Water'), (0.18181818181818182, 'Snakes on a Plane'), (0.15384615384615385, 'Just My Luck'), (0.14814814814814814, 'You, Me and Dupree'), (0.10256410256410256, 'Superman Returns')]}
-[(3.182634730538922, 'The Night Listener'), (2.5983318700614575, 'Just My Luck'), (2.4730878186968837, 'Lady in the Water')]
+{'Lady in the Water': [(0.4494897427831781, 'You, Me and Dupree'), (0.38742588672279304, 'The Night Listener'), (0.3483314773547883, 'Snakes on a Plane'), (0.3483314773547883, 'Just My Luck'), (0.2402530733520421, 'Superman Returns')], 'Snakes on a Plane': [(0.3483314773547883, 'Lady in the Water'), (0.32037724101704074, 'The Night Listener'), (0.3090169943749474, 'Superman Returns'), (0.2553967929896867, 'Just My Luck'), (0.1886378647726465, 'You, Me and Dupree')], 'Just My Luck': [(0.3483314773547883, 'Lady in the Water'), (0.32037724101704074, 'You, Me and Dupree'), (0.2989350844248255, 'The Night Listener'), (0.2553967929896867, 'Snakes on a Plane'), (0.20799159651347807, 'Superman Returns')], 'Superman Returns': [(0.3090169943749474, 'Snakes on a Plane'), (0.252650308587072, 'The Night Listener'), (0.2402530733520421, 'Lady in the Water'), (0.20799159651347807, 'Just My Luck'), (0.1918253663634734, 'You, Me and Dupree')], 'You, Me and Dupree': [(0.4494897427831781, 'Lady in the Water'), (0.32037724101704074, 'Just My Luck'), (0.29429805508554946, 'The Night Listener'), (0.1918253663634734, 'Superman Returns'), (0.1886378647726465, 'Snakes on a Plane')], 'The Night Listener': [(0.38742588672279304, 'Lady in the Water'), (0.32037724101704074, 'Snakes on a Plane'), (0.2989350844248255, 'Just My Luck'), (0.29429805508554946, 'You, Me and Dupree'), (0.252650308587072, 'Superman Returns')]}
+[(3.1667425234070894, 'The Night Listener'),
+ (2.9366294028444346, 'Just My Luck'),
+ (2.868767392626467, 'Lady in the Water')]
 < # END of "first"	> 
 
 	# ========== Job ends  =========== #
 	
 logout
+
 """
